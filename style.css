@@ -16,11 +16,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Unbounded', cursive;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 body{
     background-color: var(--color-night);
+
+    /* adicionando scroll apenas na vertical */
+    height: 150px;
+    overflow: hidden;
+    overflow-y: auto;
+    /* edição para firefox */
+    scrollbar-width: thin;
     /* zoom: 80%; */
 }
 
@@ -28,6 +39,26 @@ section{
     /* background-color: lightcoral; */
     height: 100vh;
 }
+
+/* --scroll-- */
+
+
+
+body::-webkit-scrollbar{
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--color-night);
+    /* border-radius: 20px; */
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--color-white);
+    /* border-radius: 20px; */
+}
+
+/* --scroll-- */
 
 .header{
     position: fixed;
@@ -289,6 +320,187 @@ h2{
     font-weight: 400;
     line-height: 1.6;   
     letter-spacing: 1px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     /* margin: 20px 0 40px; */
 }
 
+/* CARDS */
+
+.projects{
+    height: 100vh;
+    width: 100%;
+    display: flex;   
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+
+.cards{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 10%; */
+    gap: 1.5rem;
+}
+
+.card{
+    background-color: var(--color-white);
+    border-radius: 8px;
+    height: 45%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: palegoldenrod; */
+}
+
+.card p{
+    margin: 1rem;
+    font-size: var(--p-font);
+    /* background-color: lightblue; */
+    font-family: 'Unbounded', cursive;
+    font-size: var(--p-font);
+    font-weight: 400;
+    line-height: 1.3;   
+    letter-spacing: 1px;
+}
+
+.projects-img{
+    /* background-color: lightblue; */
+    background-color: #aaaaaa;
+    height: 70%;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+
+}
+
+.projects-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.cover-text{
+    position: absolute;
+    height: 86vh;
+    width: 100%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.508);
+    backdrop-filter: blur(10px);
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+
+.cover-text h2{
+    text-align: center;
+    font-size: var(--start-section-text);
+    text-transform: uppercase;
+}
+
+/* CONTACT */
+
+.container{
+    width: 80%;
+    margin: 2% auto;
+    /* background-color: rebeccapurple; */
+}
+
+.contact-box{
+    background-color: var(--color-white);
+    display: flex;
+}
+.contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right{
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: var(--color-davys-gray-2);
+    color: var(--color-white);
+}
+
+.container h2{
+    margin-bottom: 1%;
+}
+
+.container h3{
+    margin-bottom: 2%;
+    font-weight: 600;
+}
+
+.container p{
+    margin-bottom: 40px;
+    color: var(--color-white);
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+
+.input-row .input-grup{
+    flex-basis: 45%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--color-davys-gray);
+    padding-bottom: 1%;
+}
+textarea{
+    width: 100%;
+    border: 1px solid var(--color-davys-gray);
+    outline: none;
+    padding: 1% 0;
+    box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 2%;
+    display: block;
+    
+}
+
+.container button{
+    background: var(--color-davys-gray-2);
+    color: var(--color-white);
+    width: 20%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 2%;
+    border: none;
+    outline: none;
+}
+
+.contact-right h3{
+    margin-bottom: 5%;
+}
+
+.contact-right a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.ph{
+    font-size: 35px;
+    vertical-align: middle;
+}
+
+.reach-me-info{
+    margin-bottom: 3%;
+    
+}
